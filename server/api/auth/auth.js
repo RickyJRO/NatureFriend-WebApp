@@ -71,7 +71,7 @@ router.post("/registo", async (req, res) => {
                         <h2>Bem vindo à NatureFriend</h2>
                         <h3>O seu registo está quase!</h3>
                         <p>Carregue no link seguinte para confirmar a sua conta!</p>
-                        <a href="http://localhost:5000/activation/${token}">Confirmação do Registo</a>
+                        <a href="https://naturefriend.herokuapp.com/activation/${token}">Confirmação do Registo</a>
                     
                         </div>
             `
