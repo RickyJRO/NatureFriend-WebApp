@@ -4,3 +4,8 @@
    height: 100vh;
    overflow: hidden;
 }
+@media screen and (max-width: 1360px) {
+   .Mapa{
+      margin-left: 0px;
+   }
+ }

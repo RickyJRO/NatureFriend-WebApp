@@ -16,7 +16,7 @@ export default function App(props) {
     <MapContainer
       center={[21.43, -10.7]}
       zoom={2}
-      style={{ width:'100%', height:'900px'}} 
+      style={{ width:'100%', height:'100%'}} 
       scrollWheelZoom={true}
     >
       <TileLayer

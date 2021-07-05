@@ -137,7 +137,7 @@ export default function CriarAlerta(props) {
                                 accept='image/*|video/*'
                                 id='post_img'
                             />
-                            <div >
+                            <div className="alertMap" style={{width:'800px',height:'400px'}}>
                                 <Map cords={coordenadas => setCoordenadas(coordenadas)} />
                             </div>
                         </div>

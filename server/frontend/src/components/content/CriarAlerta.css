@@ -1,6 +1,7 @@
 .criarAlerta {
     margin-top: 100px;
     margin-left: 295px;
+    
 }
 .previewPostImgs {
     max-width: 600px;
@@ -61,6 +62,10 @@
     display: flex;
     flex: 1;
     justify-content: center;
+}
+.alertaMap{
+    width: 500px !important;
+    height: 400px !important;
 }
 @media screen and (max-width: 1360px) {
     .criarAlerta{
