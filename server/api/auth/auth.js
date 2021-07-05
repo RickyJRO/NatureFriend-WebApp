@@ -125,7 +125,7 @@ router.post("/googleLogin", async(req,res)=>{
         }
     } else { 
         const dados = [req.body.name, req.body.email,req.body.googleId,1 ]
-            const sql = 'INSERT INTO users(user_name, user_email,google_id,changed_photo ) VAlUES ($1,$2,$3,$4,$5);'
+            const sql = 'INSERT INTO users(user_name, user_email,google_id,changed_photo ) VAlUES ($1,$2,$3,$4);'
             const obj = await db.query(sql, dados).then(async ()=>{
                 const sql = "SELECT * FROM users WHERE user_email=$1";
                 const doc = await db.query(sql, [req.body.email]).then((ress)=>{
