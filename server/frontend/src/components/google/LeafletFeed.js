@@ -15,9 +15,6 @@ export default function App(props) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     <Marker position={[props.lat, props.lng]} icon={icon}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
     </Marker>
   </MapContainer>
   </div>
