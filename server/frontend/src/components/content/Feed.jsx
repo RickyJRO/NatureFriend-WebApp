@@ -164,9 +164,9 @@ export default function Feed(props) {
 
                                 </div>
                             </div>
-                            <div>
-                                {post.post_lat != undefined ? <Maps lat={post.post_lat} lng={post.post_lng} /> : ""}
-                            </div>
+                           
+                            {post.post_lat != undefined ? <div className="postMap"><Maps  lat={post.post_lat} lng={post.post_lng} /></div>: ""}
+                            
                            
                                     <Likes postid={post.post_id} userid={props.userid}/>
                         </motion.div>

@@ -12,7 +12,7 @@ import Noticias from '../components/content/Noticias'
 import {Route, Switch } from 'react-router-dom'
 import logo from '../logo.png'
 import {motion} from 'framer-motion'
-
+import Mapa from '../components/content/Mapa'
 
 export default function Content() {
     const [username, setUsername] = useState(null)
@@ -116,11 +116,16 @@ export default function Content() {
             <Menu username={username} avatar={avatar} googleImage={googleImage} userrank={userRank} userid={userId} />
                 <UserProfiles userid={userId}/>
             </Route>
+            <Route exact path="/App/Mapa">
+            <Menu username={username} avatar={avatar} googleImage={googleImage} userrank={userRank} userid={userId} />
+            <Mapa />
+            </Route>
             <Route path="*">
             <Menu username={username} avatar={avatar} googleImage={googleImage} userid={userId} userrank={userRank} activeFeed="true"/>
                 <Feed avatar={avatar} user={username} googleImage={googleImage} userid={userId}/>
                 <Noticias />
             </Route>
+            
             </Switch>
             </div>
         </div>

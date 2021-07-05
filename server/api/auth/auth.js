@@ -27,7 +27,7 @@ router.get("/activation/:token", async (req, res) => {
         const dados = ["active", "", token];
         const sql = 'UPDATE users SET status=$1,activated_token=$2 WHERE activated_token = $3;';
         await db.query(sql, dados);
-        return res.redirect("https://naturefriend.herokuapp.com/activation/:notify");
+        return res.redirect("https://naturefriend.herokuapp.com");
     }
 });
 
@@ -124,8 +124,8 @@ router.post("/googleLogin", async(req,res)=>{
             res.json({result: "success", token, message: "Login efetuado com sucesso!"});
         }
     } else { 
-        const dados = [req.body.name, req.body.email, req.body.imageUrl, req.body.googleId,0 ]
-            const sql = 'INSERT INTO users(user_name, user_email,user_img,google_id,changed_photo ) VAlUES ($1,$2,$3,$4,$5);'
+        const dados = [req.body.name, req.body.email,req.body.googleId,1 ]
+            const sql = 'INSERT INTO users(user_name, user_email,google_id,changed_photo ) VAlUES ($1,$2,$3,$4,$5);'
             const obj = await db.query(sql, dados).then(async ()=>{
                 const sql = "SELECT * FROM users WHERE user_email=$1";
                 const doc = await db.query(sql, [req.body.email]).then((ress)=>{

@@ -8,13 +8,7 @@
     border: 1px solid rgba(0, 0, 0, 0.801);
     margin-bottom: 25px;
 }
-.postMap {
-    width: 120px !important;
-    
-    height: 300px !important;
-    position: relative !important;
 
-}
 .buttonSubmit {
     margin-top: 10px;
     background: linear-gradient(#4eb8ff, rgba(5, 149, 233, 0.836));
@@ -34,12 +28,7 @@
     transition: 200ms;
     background-color:#3ac1f7;
 }
-.leaflet-container {
-    overflow: hidden !important;
-    width: 900px !important;
-    height: 400px !important;
-    position: relative !important;
-}
+
 .criarAlertaTop {
     display: flex;
     margin-bottom: 50px;

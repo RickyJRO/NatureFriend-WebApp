@@ -18,6 +18,9 @@ import { faLeaf} from '@fortawesome/free-solid-svg-icons'
 import { faSmog} from '@fortawesome/free-solid-svg-icons'
 import { faHiking} from '@fortawesome/free-solid-svg-icons'
 import { faGem} from '@fortawesome/free-solid-svg-icons'
+import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
+import WarningIcon from '@material-ui/icons/Warning';
+import MapIcon from '@material-ui/icons/Map';
 const Menu = (props) => {
     const [feedActive, setFeedActive] = useState(null)
     const [PostsActive, setPostsActive] = useState(null)
@@ -25,6 +28,7 @@ const Menu = (props) => {
     const [PerfilActive, setPerfilActive] = useState(null)
     const [GuiaActive, setGuiaActive] = useState(null)
     const [CriarPostActive, setCriarPostActive] = useState(null)
+    const[MapaActive, setMapaActive] = useState(null)
     const[darkmode, setDarkMode] = useState(false)
     const [rank, setRank] = useState(null)
     
@@ -73,6 +77,7 @@ const Menu = (props) => {
                         setGuiaActive(false)
                         setCriarPostActive(false)
                         setDefinicoesActive(false)
+                        setMapaActive(false)
                     }}><img src={props.googleImage ? props.googleImage : props.avatar} className='avatar' id='avatars' /></Link>
                         </motion.div>
                         <Link to={{ pathname: `/App/Perfis/${props.userid}` }} className='userName' onClick={() => {
@@ -82,6 +87,7 @@ const Menu = (props) => {
                         setGuiaActive(false)
                         setCriarPostActive(false)
                         setDefinicoesActive(false)
+                        setMapaActive(false)
                     }}><h1 className='userNameh1'>{props.username}</h1></Link>
                     <h2 className='userNameh2'>
                         {rank =="Bronze" && <span style={{color:"rgba(201, 80, 0, 0.76)"}} className="rank">{rank}  <FontAwesomeIcon icon={faTree}/></span>}
@@ -104,6 +110,7 @@ const Menu = (props) => {
                         setPostsActive(false)
                         setDefinicoesActive(false)
                         setFeedActive(true)
+                        setMapaActive(false)
                     }}>
                         <Link to="/App/Feed" className='menuLink'> <HomeIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'>Página Inicial</span></Link>
                     </li>
@@ -114,8 +121,20 @@ const Menu = (props) => {
                         setFeedActive(false)
                         setDefinicoesActive(false)
                         setPostsActive(true)
+                        setMapaActive(false)
                     }}>
                         <Link to="/App/Posts" className='menuLink'><FilterIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'>Os Meus Alertas</span></Link>
+                    </li>
+                    <li className={MapaActive ? 'active' : ''} onClick={() => {
+                        setCriarPostActive(false)
+                        setFeedActive(false)
+                        setPostsActive(false)
+                        setPerfilActive(false)
+                        setDefinicoesActive(false)
+                        setGuiaActive(false)
+                        setMapaActive(true)
+                    }}>
+                        <Link to="/App/Mapa" className='menuLink'> <MapIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'>Mapa</span></Link>
                     </li>
                     <li className={PerfilActive ? 'active' : ''} onClick={() => {
                         setCriarPostActive(false)
@@ -124,6 +143,7 @@ const Menu = (props) => {
                         setFeedActive(false)
                         setPostsActive(false)
                         setDefinicoesActive(false)
+                        setMapaActive(false)
                     }}>
                         
                         <Link  to={{ pathname: `/App/Perfil/${props.userid}` }} className='menuLink'><PersonIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'>Perfil</span></Link>
@@ -135,6 +155,7 @@ const Menu = (props) => {
                         setPostsActive(false)
                         setPerfilActive(false)
                         setDefinicoesActive(true)
+                        setMapaActive(false)
                     }}>
                         <Link to="/App/Definições" className='menuLink'><SettingsIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'> Definições</span></Link>
                     </li>
@@ -145,6 +166,7 @@ const Menu = (props) => {
                         setPerfilActive(false)
                         setDefinicoesActive(false)
                         setGuiaActive(true)
+                        setMapaActive(false)
                     }}>
                         <Link to="/App/Guia" className='menuLink'> <HelpIcon  style={{ fontSize: 40 }} className='icons' /><span className='textoLink'>Guia</span></Link>
                     </li>
@@ -156,8 +178,9 @@ const Menu = (props) => {
                         setGuiaActive(false)
                         setDefinicoesActive(false)
                         setCriarPostActive(true)
+                        setMapaActive(false)
                     }}>
-                        <Link to="/App/CriarAlerta" className='menuLink' ><ExitToAppIcon style={{ fontSize: 40 }} className='icons'/><span className='textoLink' >Criar Alerta</span></Link>
+                        <Link to="/App/CriarAlerta" className='menuLink' ><WarningIcon style={{ fontSize: 40 }} className='icons'/><span className='textoLink' >Criar Alerta</span></Link>
                     </li>
                     <li >
                         <a className='menuLink'
@@ -191,17 +214,7 @@ const Menu = (props) => {
                         </a>
                     </li>
                    
-                    <div className='containerBtn'>
-                        <Link to='/App/CriarAlerta'>
-                            <button className='btnCreate' onClick={()=>{
-                             setFeedActive(false)
-                             setPostsActive(false)
-                             setPerfilActive(false)
-                             setGuiaActive(false)
-                             setCriarPostActive(true)
-                        }}>Criar Alerta</button>
-                        </Link>
-                    </div>
+                   
                     
                     
                 </ul>

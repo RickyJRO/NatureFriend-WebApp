@@ -57,7 +57,7 @@ function UserData(props) {
                         {rank =="diamond" && <span style={{color:"#00e0fd"}}><FontAwesomeIcon className="user_rank" icon={faGem}/></span>}
                 </Link>
                 <div className='userDataDateContainer'>
-                    <p className='userDataDate'>{days + " ás " + time}</p>
+                    <p className='userDataDate'>{days + " às " + time}</p>
                 </div>
                 
             </div>

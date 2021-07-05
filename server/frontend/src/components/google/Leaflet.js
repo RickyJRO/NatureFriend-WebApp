@@ -16,7 +16,8 @@ export default function App(props) {
     <MapContainer
       center={[21.43, -10.7]}
       zoom={2}
-       
+      style={{ width:'100%', height:'900px'}} 
+      scrollWheelZoom={true}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

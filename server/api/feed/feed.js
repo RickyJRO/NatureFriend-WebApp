@@ -170,6 +170,18 @@ feed.get("/Feed", async (req, res) => {
             console.log(err)}}
 );
 
+feed.get("/FeedMapa", async (req, res) => {
+    try {
+            const sql = "SELECT * FROM posts WHERE post_lat IS NOT NULL"
+            const doc = await db.query(sql).then((resp) => {
+                return res.json(resp);
+            }).catch((err)=>{
+                console.log(err)
+            })   
+        } catch(err){
+            console.log(err)}}
+);
+
 feed.post("/CriarPost", async (req, res) => {
     try {
     var form = new formidable.IncomingForm();
