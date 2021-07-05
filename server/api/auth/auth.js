@@ -190,7 +190,7 @@ router.post("/password-reset", async (req, res) => {
                     font-family: sans-serif;
                     ">
                     <h3>Use o link seguinte para mudar a sua password!</h3>
-                    <a href="http://localhost:3000/password/reset/${token}">Alterar Password</p></a>
+                    <a href="https://naturefriend.herokuapp.com/password/reset/${token}">Alterar Password</p></a>
                     <hr />
                     <p>Este link tem a validade de 1 dia</p>
                     </div>
