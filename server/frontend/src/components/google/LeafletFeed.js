@@ -9,7 +9,7 @@ export default function App(props) {
 
   return (
     <div className='leafletPosts'>
-    <MapContainer center={[props.lat, props.lng]} zoom={6} scrollWheelZoom={false}>
+    <MapContainer center={[props.lat, props.lng]} zoom={6} >
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

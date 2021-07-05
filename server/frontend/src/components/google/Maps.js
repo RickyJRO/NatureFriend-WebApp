@@ -16,7 +16,7 @@ export default function Maps(props) {
     const position = [51.505, -0.09]
     console.log(props.markers);
   return (
-    <MapContainer center={position} zoom={3} scrollWheelZoom={false}>
+    <MapContainer center={position} zoom={3}>
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
