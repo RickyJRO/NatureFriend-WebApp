@@ -1,0 +1,74 @@
+.darkmode1{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+  .hidden {
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  .toggle-wrapper {
+    width: 100px;
+    display: block;
+  }
+  
+  .toggle {
+    box-shadow: 0 1px 4px  #333333;
+    height: 35px;
+    width: 100px;
+    background: var(--background);
+    border-radius: 40px;
+    padding: 5px;
+    position: relative;
+    margin: auto; 
+    cursor: pointer;
+  }
+  .toggle::before {
+    content: "";
+    display: block;
+    height: 31px;
+    width: 31px;
+    padding: 2px;
+    border-radius: 30px;
+    background: var(--foreground);
+    position: absolute;
+    transform: translate(0);
+    transition: transform var(--transition);
+  }
+  
+  .toggle.enabled::before {
+    transform: translateX(65px);
+  }
+  
+  .toggle input {
+      position: absolute;
+      top: 0;
+        opacity: 0;
+  }
+  .toggle .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 1px;
+  }
+  
+  .toggle .icons svg {
+    margin-top: -8px;
+    height: 30px;
+    width: 30px;
+    
+  }
+  .iconsToggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 1px;
+    color:#7cb444;
+  }

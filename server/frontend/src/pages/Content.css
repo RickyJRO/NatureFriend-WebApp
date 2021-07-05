@@ -1,0 +1,30 @@
+.page{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+}
+.main{
+  
+    display: flex;
+    height: 100%;
+    flex: 7;
+    justify-content: center;
+ 
+}
+::-webkit-scrollbar {
+    float: right;
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #dad8d8;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #3ac6fdd2;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:  #3ac6fdd2;
+  }

@@ -1,0 +1,418 @@
+*{
+  outline: none;
+}
+body{
+   overflow-x: hidden;
+   
+}
+.background{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  
+}
+
+.logotop{
+  width: 125px;
+  margin-bottom: -25px;
+  justify-content: start;
+text-align: start;
+}
+.homepage{
+  background-image: url("../whiteback1.png");
+  background-position: center;
+  background-repeat:repeat-y;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100vh;
+  
+}
+.logoHome{
+  width: 700px;
+  height: 400px;
+
+}
+.home__left{
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+
+  justify-content: flex-end;
+  align-self: start;
+  margin-top: 150px;
+}
+.home__right{
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+.description{
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0px;
+  width: 500px;
+}
+.description > h1 {
+  text-shadow: 
+  3px 3px 5px rgba(100, 100, 100, 0.226); 
+  margin-bottom: 10px;
+}
+.description > h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgb(141, 141, 141) !important;
+}
+.login{
+  
+}
+.ModalDisplayNone{
+    display: none;
+}
+.ModalForgotDisplayNone{
+  display: none;
+}
+.ModalRegisto{
+    position: fixed;
+    z-index: 2;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.ModalForgot{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.ModalMain{
+    position:fixed;
+  background: white;
+  width: 40%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.formLogin{
+  position: relative;
+  background-color: #fff;
+  width: 400px;
+  text-align: center;
+  padding: 25px;
+  margin-top: 100px;
+  box-shadow: 0px 0px 3px 0.5px rgba(187, 187, 187, 0.596);
+  border-radius: 7px;
+  height: 700px;
+}
+.formLogin > h2{
+  color: rgb(60, 74, 91);
+ margin-left: 10px;
+  text-align: start;
+}
+.formLogin >h3{
+  color: rgb(104, 119, 141);
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 10px;
+  text-align: start;
+}
+.btnLogin{
+  margin-top: 5px;
+  padding: 13px;
+  padding-left: 112px;
+  border-radius: 100px;
+  padding-right: 112px;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: linear-gradient(#9ed666, rgba(59, 201, 16, 0.836));
+  color: #fff;
+  
+}
+.btnLogin:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.mobileApp{
+  margin-top: 290px;
+  background-color: #fff;
+  height: 100vh;
+}
+.h1iniciarsessao{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.buttonEsqueceuse{
+text-align: start;
+ margin-bottom: 10px;
+ background-color: transparent;
+ border: none;
+ color: #77ce20 !important;
+ font-size: 16px;
+ margin-top: 20px;
+ font-weight: bold;
+ outline: none;
+}
+.buttonEsqueceuse:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.criarConta{
+  position: absolute;
+  bottom: 6.5%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px rgba(68, 69, 70, 0.582), 
+  1px 1px 4px rgba(180, 180, 180, 0.623); 
+  color: #fff;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: linear-gradient(#4eb8ff, rgba(5, 149, 233, 0.836));
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 3px grey;
+}
+.criarConta:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.iniciarSessao{
+  margin-bottom: 20px;
+}
+
+.NatureFriend{
+  font-family: cursive;
+  color: #535353;
+  font-size: 66px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: start;
+}
+
+.mockup{
+  padding-left: 200px;
+  width: 250px;
+  height: 500px;
+}
+.store{
+  margin-left: 30px;
+  width: 250px;
+  margin-top: 20px;
+  height: 150px;
+}
+.appstore{
+  padding: 5rem;
+  width: 320px;
+}
+.video{
+  width: 80%;
+  height: auto;
+}
+.appstore >h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px rgba(68, 69, 70, 0.493), 
+  0.5px 0.5px 3px rgb(180, 180, 180); 
+}
+.footer{
+  height: 100px
+}
+.footer > h2{
+  margin-top: 35px;
+  font-weight: 500;
+  color: #757574;
+  font-size: 13px;
+  text-align: center;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.registo{
+  border-radius: 10px;
+}
+.ModalMain{
+  border-radius: 5px;
+  padding: 20px;
+}
+.formRegistoContainer > h1 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.685);
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+.formRegistoContainer > h2 {
+  text-align: center;
+  color: #88c54b;
+  font-weight: 400;
+}
+.iconFecharRegisto{
+  border: none;
+  background-color: transparent;
+  color: #88c54b;
+  font-size: 28px;
+  cursor: pointer;
+  outline: none;
+  justify-content: end;
+}
+.formRegisto{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 25px;
+}
+.buttonCriarConta{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 40px;
+}
+.buttonCriarConta2{
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(#4eb8ff, rgba(5, 149, 233, 0.836));
+  color: #fff;
+  font-size: 24px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  box-shadow: 0px 0px 2px grey;
+}
+.buttonCriarConta2:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.04);
+}
+#passwordHelp{
+  color: rgba(255, 0, 0, 0.5);
+  padding: 10px;
+  font-weight: 500;
+}
+.buttonFecharForgot{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #88c54b;
+}
+.passeNovaContainer{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.buttonPasseNova{
+  border: none;
+  background: linear-gradient(#4eb8ff, rgba(5, 149, 233, 0.836));
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px grey;
+}
+.buttonPasseNova:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.passwordReset{
+  display: flex;
+  flex: 1;
+  background-image: url("../whiteback1.png");
+  background-position: center;
+  background-repeat:repeat-y;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  background-color: #fff;
+  height: 100vh;
+}
+.logoReset{
+  margin-top: 100px;
+  width: 250px;
+}
+.inicial{
+  margin-bottom: 314px;
+}
+.buttonGuardar{
+  border: none;
+  outline: none;
+  background-color: #65cdf7;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  border-radius: 10px;
+  box-shadow: 1px 1.5px 5px grey;
+}
+.buttonGuardar:hover{
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.loginemail{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.loginemail >h2{
+  font-size: 16px;
+  color: #535353;
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 2px solid rgba(173, 171, 171, 0.281); 
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.loginemail >h2 >span{
+  background:#fff; 
+    padding:0 10px;
+}
+.botaoGoogle{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding: 5px !important;
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+  border-radius: 50px !important;
+  box-shadow: none;
+  border: 1px solid #979797 !important;
+}
+@media screen and (max-width: 1000px) {
+ .background{
+   flex-direction: column;
+ }
+ .home__left{
+   align-self: center;
+ }
+}

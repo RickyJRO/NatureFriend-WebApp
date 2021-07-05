@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.15.1",
+    "npm": "7.5.4"
+  },
+  "scripts": {
+    "build": "set INLINE_RUNTIME_CHUNK=false&&react-scripts build",
+    "heroku-postbuild": "cd server && cd frontend && npm install && npm run build",
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.3.0",
+    "formidable": "^1.2.2",
+    "fs-extra": "^9.1.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.4",
+    "njwt": "^0.4.0",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.5.0",
+    "path": "^0.12.7",
+    "pg": "^8.5.1"
+  }
+}

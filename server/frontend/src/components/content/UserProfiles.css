@@ -1,0 +1,196 @@
+.userprofiles {
+  margin-left: 300px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.container__avatar{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid rgba(201, 80, 0, 0.76);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.bronze{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid rgba(201, 80, 0, 0.76);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.silver{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid rgb(131, 131, 131);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.gold{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid #f7de00;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.platinum{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid #00ffc8;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.diamond{
+    box-shadow: 0 1px 5px 2px rgba(100, 100, 100, 0.76);
+    border: 3px solid #00e0fd;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 300ms;
+    position: relative;
+    background-color: rgb(103, 107, 107);
+}
+.avatarUser {
+    width: 100%;
+    height: auto;
+     
+}
+.avatar__badge{
+    z-index: 30;
+    font-size: 34px;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 1px rgba(100, 100, 100, 0.76);
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+.userprofilerank{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; 
+}
+.userprofile__badge{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.rowUsers {
+    background-color:var(--foreground);
+    display: flex;
+    flex: 1;
+    box-shadow: 0px 0px 4px #8a8a8a;
+}
+.columnUsers {
+    padding: 75px;
+    display: flex;
+}
+.columnUserDesc {
+    
+    color:var(--background);
+    flex: 1;
+}
+.profile__description{
+    max-width: 700px;
+}
+.columnUserDesc >h3{
+    font-size: 20px;
+}
+.columnUserDesc > p{
+    font-weight: 600;
+    color: #5a5959;
+}
+.profileUsername{
+    text-align: center;
+    margin-left: -445px;
+    font-size: 42px;
+    background: -webkit-linear-gradient(#9ed666, rgb(59, 201, 16));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.userprofile_container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    
+}
+.UserPostContainer{
+    
+}
+.UserPostCard{
+    background-color: var(--foreground);
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.274);
+    border-radius: 20px;
+    width: 700px;
+    transition: 0.3s;
+    margin-bottom: 75px;
+}
+.UserPost_top{
+
+}
+.UserPostName{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #7cb444;
+    display: flex;
+    justify-content: center;
+}
+.UserPostDescription{
+    margin-top: -40px;
+    color:var(--background);
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+.UserPostImg{
+    display: flex;
+    justify-content: center;
+     max-width: 700px;
+     max-height: 700px;
+ 
+     background-color: rgb(0, 0, 0);
+}
+.user_rank{
+    margin-left: 10px;
+    font-size: 23px;
+    filter:drop-shadow(0px 1px 0.6px rgba(99, 96, 96, 0.699))
+
+}
+@media screen and (max-width: 1360px) {
+    .userprofiles {
+  margin-left: 0px;
+    }
+  }

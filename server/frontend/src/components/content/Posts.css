@@ -1,0 +1,65 @@
+.userposts_container {
+    padding: 50px;
+    margin-left: 300px;
+    min-height: 900px;
+    justify-content: center;
+}
+.semposts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sad{
+ display: flex;
+ text-align: center;
+ justify-content: center;
+}
+.userposts_card > button {
+    position: absolute;
+    bottom: 10px;
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    padding: 5px 20px;
+    color: #fff;
+    left: 170px;
+}
+.userposts_container > h1{
+    color: var(--background);
+}
+.userposts_card > button:hover {
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    transform: scale(1.05);
+}
+.Button_eliminar{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 10px;
+}
+.Button_eliminarr{
+    padding: 5px;
+    background-color: rgb(247, 97, 97);
+    border: none;
+    box-shadow: 0 1px 3px  #000000ec;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+.Button_eliminarr:hover{
+    transition: 200ms;
+    cursor: pointer;
+    background-color: rgb(252, 63, 63);
+}
+@media screen and (max-width: 1360px) {
+    .userposts_container{
+        margin-left: 0px;
+    }
+   }

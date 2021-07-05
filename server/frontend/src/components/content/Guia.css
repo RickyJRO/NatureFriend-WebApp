@@ -1,0 +1,69 @@
+.guia{
+    display: flex;
+    
+}
+.guia__container{
+margin-left: 300px;
+margin-top: 75px;
+display: flex;
+flex: 1;
+align-items: center;
+    align-self: center;
+    align-content: center;
+}
+.guia__card{
+    width: 1000px;
+    height: 800px;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.274);
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+.arrow__left{
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+font-size: 42px !important;
+}
+.arrow__left:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 200ms;
+}
+.arrow__right:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 200ms;
+}
+.arrow__right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 42px !important;
+}
+.guia__text{
+    text-align: center;
+    padding: 50px;
+}
+.logo__guia{
+    width: 200px;
+    height: 200px;
+}
+.guia__description{
+    padding: 5rem;
+    text-align: start;
+    
+}
+.guia__descriptionGif{
+    margin-top: -30px;
+    padding: 1rem;
+    text-align: start;
+    color: rgb(78, 78, 78);
+}
+.guia__gif{
+    border: 2px solid black;
+    width: 100%;
+}
