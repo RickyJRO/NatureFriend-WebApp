@@ -27,7 +27,7 @@ router.get("/activation/:token", async (req, res) => {
         const dados = ["active", "", token];
         const sql = 'UPDATE users SET status=$1,activated_token=$2 WHERE activated_token = $3;';
         await db.query(sql, dados);
-        return res.redirect("http://localhost:5000");
+        return res.redirect("https://naturefriend.herokuapp.com/activation/:notify");
     }
 });
 
@@ -44,7 +44,6 @@ router.post("/registo", async (req, res) => {
         const sql1 = "SELECT 1 FROM users WHERE user_name=$1"
         const dadosqli1 = [req.body.username]
         const checkuser = await db.query(sql1,dadosqli1);
-        console.log(checkuser)
         if (checkuser.rowCount > 0){
             res.json({result: "error", message: "Username em uso!"});
         }else{
@@ -82,10 +81,11 @@ router.post("/registo", async (req, res) => {
                     console.log("Error " + err);
                 } else {
                     console.log("Email enviado com sucesso");
+                    res.json({result: "success", message: `Email enviado para (${email}) Por favor confirme a sua conta!`});
                 }
             });
 
-            res.json({result: "success", message: `Email enviado para (${email}) Por favor confirme a sua conta!`});
+            
             }
             }
     } catch (err) {
