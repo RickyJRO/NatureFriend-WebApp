@@ -94,9 +94,10 @@ router.post("/registo", async (req, res) => {
     }
 })
 router.post("/googleLogin", async(req,res)=>{
+    console.log(req.body)
     const sql = "SELECT * FROM users WHERE user_email=$1";
     const doc = await db.query(sql, [req.body.email]);
-    console.log(req.body)
+    
     if (doc.rowCount > 0) {
         const obj = doc.rows[0];
         if(req.body.googleId == null){
@@ -144,6 +145,7 @@ router.post("/googleLogin", async(req,res)=>{
     }
 });
 router.post("/login", async (req, res) => {
+    console.log(req.body)
     const sql = "SELECT * FROM users WHERE user_email=$1";
     const doc = await db.query(sql, [req.body.email]);
     if (doc.rowCount > 0) {

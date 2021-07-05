@@ -20,7 +20,7 @@ export default function Auth() {
         setModalForgot(false)
     }
     const responseGoogle =async response => {
-        console.log(response.profileObj)
+        console.log(response)
         await axios
         .post("/" + "googleLogin",response.profileObj)
         .then(res => {
