@@ -30,7 +30,7 @@ export default function Maps(props) {
             <br></br> <br></br>
           {post.post_title}<br></br> <br></br>
           {post.post_description}<br></br><br></br>
-          <img src={post.post_img} className="imgpopup"/>
+          <img src={'/' + post.post_img} className="imgpopup"/>
           </div>
         </Popup>
       </Marker>

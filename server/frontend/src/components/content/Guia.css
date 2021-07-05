@@ -15,7 +15,7 @@ align-items: center;
     width: 1000px;
     height: 800px;
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.274);
-    background-color: #fff;
+    background-color: var(--foreground);
     border-radius: 10px;
     position: relative;
 }
@@ -24,12 +24,14 @@ position: absolute;
 top: 0;
 bottom: 0;
 margin: auto;
+color: var(--background);
 font-size: 42px !important;
 }
 .arrow__left:hover{
     cursor: pointer;
     transform: scale(1.3);
     transition: 200ms;
+    
 }
 .arrow__right:hover{
     cursor: pointer;
@@ -37,6 +39,7 @@ font-size: 42px !important;
     transition: 200ms;
 }
 .arrow__right{
+    color: var(--background);
     position: absolute;
     right: 0;
     top: 0;
@@ -47,6 +50,7 @@ font-size: 42px !important;
 .guia__text{
     text-align: center;
     padding: 50px;
+    color: var(--background);
 }
 .logo__guia{
     width: 200px;
@@ -55,13 +59,13 @@ font-size: 42px !important;
 .guia__description{
     padding: 5rem;
     text-align: start;
-    
+    color: var(--background);
 }
 .guia__descriptionGif{
     margin-top: -30px;
     padding: 1rem;
     text-align: start;
-    color: rgb(78, 78, 78);
+    color: var(--background);
 }
 .guia__gif{
     border: 2px solid black;
