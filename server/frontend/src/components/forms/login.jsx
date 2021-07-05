@@ -41,6 +41,8 @@ class Login extends Component {
             });
           } else if (res.data.result === "error") {
             swal("Erro!", res.data.message, "error");
+          }else{
+            console.log(res.data)
           }
         })
         .catch(error => {

@@ -42,6 +42,7 @@ class Register extends Component {
             window.location.reload();
           })
         } else if (res.data.result === "error") {
+          console.log(res.data)
           swal("Erro!", res.data.message, "error");
         }
       })
