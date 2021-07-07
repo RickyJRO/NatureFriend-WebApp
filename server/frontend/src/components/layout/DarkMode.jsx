@@ -12,7 +12,6 @@ export default function DarkMode() {
     };
 
     useEffect(() => {    
-        console.log(darkMode)
        updateTheme(darkMode);
     }, [darkMode]);
 

@@ -45,11 +45,7 @@ export default function UserProfiles(props) {
                 setUserPhone(res.data.user_phone)
                 setUserDescription(res.data.user_description)
                 setUserRank(res.data.user_rank)
-                if(res.data.changed_photo == 0){
-                    setGoogleImage(res.data.user_img)
-                }else{
-                    setUserImg('/' + res.data.user_img)
-                }
+                setUserImg(res.data.user_img)
             }).catch((err)=> {
                 console.log(err)
             });
@@ -67,6 +63,20 @@ export default function UserProfiles(props) {
         componentDidMount();
     }, [id]);
 
+    function setPhoto(photo){
+        try{
+            console.log(photo.split("_").length)
+            if(photo.split("_").length > 1){
+                return 'https://naturefriend-mobile.herokuapp.com/' + photo
+            }else{
+                return '/' + photo
+            }
+        }catch{
+            return '/' + photo
+        }
+        
+    }
+  
     return (
         <>
         {loader &&  <div className='loader'></div>}
@@ -80,7 +90,7 @@ export default function UserProfiles(props) {
                 <div className="rowUsers">
                     <div className='columnUsers'>
                         <div className={rank}>
-                        <img id='avatarUser' src={googleImage != null ? googleImage : userImg } className='avatarUser'></img>
+                        <img id='avatarUser' src={setPhoto(userImg)} className='avatarUser'></img>
                         <div className="avatar__badge">
                         {rank =="bronze" && <span style={{color:"rgba(201, 80, 0, 0.76)"}}><FontAwesomeIcon className="userprofilerank" icon={faTree}/></span>}
                         {rank =="silver" && <span style={{color:"rgb(131, 131, 131)"}}> <FontAwesomeIcon className="userprofilerank" icon={faLeaf}/></span>}

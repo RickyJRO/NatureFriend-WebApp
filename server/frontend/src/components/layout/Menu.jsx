@@ -32,7 +32,7 @@ const Menu = (props) => {
     const[darkmode, setDarkMode] = useState(false)
     const [rank, setRank] = useState(null)
     
-    console.log(props.userrank)
+
 
     useEffect(()=>{
         if(props.activeFeed){

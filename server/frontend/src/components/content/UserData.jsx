@@ -44,7 +44,20 @@ function UserData(props) {
     const hour = hours.split(":")
     const time = hour[0] +":"+ hour[1];
 
-
+    function setPhoto(photo){
+        try{
+            console.log(photo.split("_").length)
+            if(photo.split("_").length > 1){
+                return 'https://naturefriend-mobile.herokuapp.com/' + photo
+            }else{
+                return '/' + photo
+            }
+        }catch{
+            return '/' + photo
+        }
+        
+    }
+  
 
 
     return (
@@ -52,7 +65,7 @@ function UserData(props) {
 
             <div className='userDataImg'
             ><Link to={{ pathname: `/App/Perfil/${props.userid}` }}>
-                    <img className='postUserImg' src={fotoMobile != null ? fotoMobile : userImg} />
+                    <img className='postUserImg' src={setPhoto(userImg)} />
                 </Link>
             </div>
             <div className='userDataNameContainer'>

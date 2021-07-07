@@ -3,18 +3,28 @@ import React,{useState} from 'react'
 function ImgVideo(props) {
     const [foto, setFoto] = useState(null);
 
-    var array = props.img.split(".")
-    console.log(isNaN(parseInt(array[0])));
-
-    if(isNaN(parseInt(array[0])) == true){
-        setFoto(props.img)
+    
+    console.log(props.img)
+    function setPhoto(photo){
+        try{
+            console.log(photo.split("_").length)
+            if(photo.split("_").length > 1){
+                return 'https://naturefriend-mobile.herokuapp.com/' + photo
+            }else{
+                return '/' + photo
+            }
+        }catch{
+            return '/' + photo
+        }
+        
     }
+  
 
     return (
         <div>
             <div>
             {props.format == "mp4" ? <video src={'/' + props.img} autoPlay muted loop></video> 
-            : <img className='UsersPostsImg' src={foto != null ?  '/' + props.img : 'https://naturefriend-mobile.herokuapp.com/' + props.img} />}
+            : <img className='UsersPostsImg' src={setPhoto(props.img)} />}
             </div>
         </div>
     )
