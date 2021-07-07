@@ -16,18 +16,21 @@ export default function Maps(props) {
   const [foto, setFoto] = useState(null);
   const position = [50,0];
 
-  console.log(props.markers);
-  function checkPhoto(photo){
-    var array = photo.split(".")
-    console.log(isNaN(parseInt(array[0])));
-
-  if(isNaN(parseInt(array[0])) == true){
-     return ('/'+ photo)
-  }else{
-    return ('https://naturefriend-mobile.herokuapp.com/' + photo)
-  }
-  }
-  
+ 
+  function setPhoto(photo){
+    try{
+      console.log(photo)
+        console.log(photo.split("_").length)
+        if(photo.split("_").length > 1){
+            return 'https://naturefriend-mobile.herokuapp.com/' + photo
+        }else{
+            return '/' + photo
+        }
+    }catch{
+        return '/' + photo
+    }
+    
+}
 
 
   return (
@@ -45,7 +48,7 @@ export default function Maps(props) {
             <br></br> <br></br>
           {post.post_title}<br></br> <br></br>
           {post.post_description}<br></br><br></br>
-          <img src={checkPhoto(post.post_img)} className="imgpopup"/>
+          <img src={setPhoto(post.post_img)} className="imgpopup"/>
           </div>
         </Popup>
       </Marker>

@@ -21,7 +21,7 @@ function UserData(props) {
         const response = await axios.get("/" + 'Perfil/id/' + id, { headers: { Authorization: localStorage.getItem('TOKEN_KEY') } });
         setUsername(response.data.user_name)
         setUserRank(response.data.user_rank)
-        setUserImg("/" + response.data.user_img)
+        setUserImg(response.data.user_img)
         
         try{
             let array = response.data.user_img
