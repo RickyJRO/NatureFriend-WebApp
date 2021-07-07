@@ -15,15 +15,23 @@ function UserData(props) {
     const [userImg, setUserImg] = useState(null)
     const [googleImg, setGoogleImg] = useState(null)
     const[rank, setUserRank] = useState(null)
+    const[fotoMobile, setFotoMobile] = useState(null)
+
     async function getData(id) {
         const response = await axios.get("/" + 'Perfil/id/' + id, { headers: { Authorization: localStorage.getItem('TOKEN_KEY') } });
         setUsername(response.data.user_name)
         setUserRank(response.data.user_rank)
-        if(response.data.changed_photo == 0){
-            setGoogleImg(response.data.user_img)
-        }else{
-            setUserImg("/" + response.data.user_img)
+        setUserImg("/" + response.data.user_img)
+        
+        try{
+            let array = response.data.user_img
+            if(array.split("_")){
+            setFotoMobile('https://naturefriend-mobile.herokuapp.com/' + array)
+            }  
+        }catch{
+
         }
+        
     }
 
     useEffect(() => {
@@ -44,7 +52,7 @@ function UserData(props) {
 
             <div className='userDataImg'
             ><Link to={{ pathname: `/App/Perfil/${props.userid}` }}>
-                    <img className='postUserImg' src={googleImg != null ? googleImg : userImg } />
+                    <img className='postUserImg' src={fotoMobile != null ? fotoMobile : userImg} />
                 </Link>
             </div>
             <div className='userDataNameContainer'>

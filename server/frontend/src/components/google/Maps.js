@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import './maps.css'
 import {
   MapContainer,
@@ -13,8 +13,16 @@ import icon from "./icon2";
 import Moment from 'react-moment';
 
 export default function Maps(props) {
-    const position = [51.505, -0.09]
-    console.log(props.markers);
+  const [foto, setFoto] = useState(null);
+
+  var array = props.img.split(".")
+  console.log(isNaN(parseInt(array[0])));
+
+  if(isNaN(parseInt(array[0])) == true){
+      setFoto(props.img)
+  }
+
+
   return (
     <MapContainer center={position} zoom={3}>
     <TileLayer
@@ -30,7 +38,7 @@ export default function Maps(props) {
             <br></br> <br></br>
           {post.post_title}<br></br> <br></br>
           {post.post_description}<br></br><br></br>
-          <img src={'/' + post.post_img} className="imgpopup"/>
+          <img src={foto != null ?  '/' + post.post_img : 'https://naturefriend-mobile.herokuapp.com/' + post.post_img} className="imgpopup"/>
           </div>
         </Popup>
       </Marker>
