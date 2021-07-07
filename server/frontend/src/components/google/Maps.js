@@ -14,6 +14,7 @@ import Moment from 'react-moment';
 
 export default function Maps(props) {
   const [foto, setFoto] = useState(null);
+  const position = [50,0];
 
   var array = props.img.split(".")
   console.log(isNaN(parseInt(array[0])));
