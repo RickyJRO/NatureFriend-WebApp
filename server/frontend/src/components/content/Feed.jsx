@@ -7,12 +7,10 @@ import UserData from './UserData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhotoVideo } from '@fortawesome/free-solid-svg-icons'
 import swal from 'sweetalert'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ImgVideo from './ImgVideo'
 import { motion } from 'framer-motion'
-import { Button } from '@material-ui/core'
-import { useInView } from 'react-intersection-observer';
-import logo from '../../logo.png'
+
+
 export default function Feed(props) {
     const [page, setPage] = useState(1);
     const [posts, setPosts] = useState([])
@@ -30,7 +28,6 @@ export default function Feed(props) {
     const loadPosts = async () => {
         console.log(page)
         await axios.get("/" + 'Feed?page=' + page + '&limit=20').then((res) => {
-            console.log(res.data.rows)
             if (res.data.rows < 1){
                 swal('Alerta!', 'Nao existem mais posts para ser Vizualizados!').then(
                 )
@@ -93,6 +90,7 @@ export default function Feed(props) {
             </div>
         )
     }
+    
     return (
         <>
         <div className='Feed' >

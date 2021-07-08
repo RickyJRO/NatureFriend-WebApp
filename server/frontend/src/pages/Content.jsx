@@ -42,23 +42,16 @@ export default function Content() {
         try {
             await axios.get("/" + 'Perfil/id/' + id,{ headers: { Authorization:localStorage.getItem('TOKEN_KEY') } }).then((res) =>{
             console.log(res.data)
-            if(res.data.changed_photo == null){
+         
             setUsername(res.data.user_name);
             setUserId(res.data.user_id)
             setUserRank(res.data.user_rank)
             setAvatar('/' + res.data.user_img)
-            }else if(res.data.changed_photo == 0){
-            setUsername(res.data.user_name);
-            setUserId(res.data.user_id)
-            setUserRank(res.data.user_rank)
-            setGoogleImage(res.data.user_img)
-            }else if(res.data.changed_photo == 1){
-                setUserRank(res.data.user_rank)
-                setUsername(res.data.user_name);
-                setUserId(res.data.user_id)
-                setAvatar('/' + res.data.user_img)
-            }
-            setLoading(false)
+            
+            setTimeout(() => {
+                setLoading(false)
+              }, 2000);
+            
         })
         }catch(err) {
             console.log(err);
@@ -70,7 +63,6 @@ export default function Content() {
         getData(id);
     }
     useEffect(() => {
-        setLoading(true)
         componentDidMount();
         
     }, [newValues]);

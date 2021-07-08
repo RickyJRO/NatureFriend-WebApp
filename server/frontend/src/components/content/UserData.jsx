@@ -46,7 +46,6 @@ function UserData(props) {
 
     function setPhoto(photo){
         try{
-            console.log(photo.split("_").length)
             if(photo.split("_").length > 1){
                 return 'https://naturefriend-mobile.herokuapp.com/' + photo
             }else{

@@ -16,9 +16,7 @@ function Noticias() {
         var url = 'http://api.mediastack.com/v1/news?access_key=00018cb1aa69c235f607b2e56c93259a&sources=cnn,-bbc' ;
           
         await axios.get(url).then((res) => {
-            console.log(res.data.data)
             setNoticias(res.data.data)
-            console.log(noticias)
             setLoading(false)
         }).catch(() => {
             swal('Erro!', 'News Api Error!').then(

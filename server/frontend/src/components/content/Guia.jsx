@@ -64,7 +64,7 @@ export default function Guia() {
             <h2>Bem Vindo ao NatureFriend</h2>
             <img src={logo} className="logo__guia"/>
             <div className="guia__description">
-            <h2>Queremos agradecer-lhe ter-se juntado á nossa comunidade!</h2>
+            <h2>Queremos agradecer-lhe ter-se juntado à nossa comunidade!</h2>
             <h3>
             Esperemos que tenha lido as normas e regras da nossa aplicação, tenha uma postura respeituosa e que o seu foco seja sempre reportar maus tratos ao nosso planeta.<br></br>
             Esta aplicação foi criada pelos alunos da Universidade Autónoma de Lisboa, Ricardo Oliveira, Rafael Rocha e David Oliveira e supervisionada pelo professor Gonçalo Valadão.
@@ -76,7 +76,7 @@ export default function Guia() {
             </h2>
             <div className="guia__descriptionGif">
             <h3>Carregar no Botão "Criar Alerta" no Menu<br></br>
-            Selecionar a fotografia do incidente e as suas respeticas informações<br></br>
+            Selecionar a fotografia do incidente e as suas respetivas informações<br></br>
             Carregar no botão Submeter<br></br><br></br>
               Exemplo:
             </h3>
@@ -88,7 +88,7 @@ export default function Guia() {
             </h2>
             <div className="guia__descriptionGif">
             <h3>Carregar no Botão "Definições" no Menu<br></br>
-            Selecionar uma fotografia ou outras informações ao seu desejo<br></br>
+            Selecionar uma fotografia ou outras informações ao seu critério<br></br>
             Carregar no botão Guardar Alterações<br></br><br></br>
               Exemplo:
             </h3>
@@ -99,7 +99,7 @@ export default function Guia() {
             <h2>Dark Mode:
             </h2>
             <div className="guia__descriptionGif">
-            <h3>A NatureFriend tem disponivel o modo Dark para puder usufruir de uma experiência completamente saudável para o ambiente em que se encontra!<br></br>
+            <h3>A NatureFriend tem disponivel o Dark mode para puder usufruir de uma experiência completamente saudável para o ambiente em que se encontra!<br></br>
             Para isso basta clicar no botão Toggle na parte inferior do menu.<br></br>
             <br></br>
               Exemplo:

@@ -21,6 +21,7 @@ import { faGem} from '@fortawesome/free-solid-svg-icons'
 import {faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
 import WarningIcon from '@material-ui/icons/Warning';
 import MapIcon from '@material-ui/icons/Map';
+
 const Menu = (props) => {
     const [feedActive, setFeedActive] = useState(null)
     const [PostsActive, setPostsActive] = useState(null)
@@ -78,7 +79,7 @@ const Menu = (props) => {
                         setCriarPostActive(false)
                         setDefinicoesActive(false)
                         setMapaActive(false)
-                    }}><img src={props.googleImage ? props.googleImage : props.avatar} className='avatar' id='avatars' /></Link>
+                    }}><img src={props.avatar} className='avatar' id='avatars' /></Link>
                         </motion.div>
                         <Link to={{ pathname: `/App/Perfis/${props.userid}` }} className='userName' onClick={() => {
                         setFeedActive(false)

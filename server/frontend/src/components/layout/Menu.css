@@ -48,7 +48,7 @@
     text-decoration: none;
     color: #f6f7f5;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 18vw;
 }
 .active {
     background-color: var(--foreground);
@@ -67,6 +67,7 @@
 .icons {
     padding: 5px;
     color: #9ed666;
+    font-size: 2vw !important;
     filter:drop-shadow(0px 0.5px 0.6px rgba(0, 0, 0, 0.699))
 }
 
@@ -78,7 +79,7 @@
 .textoLink {
     color: var(--background);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1vw;
     margin-left: 10px;
 }
 .containerAvatarMenu {
@@ -152,7 +153,7 @@
     text-shadow: 0px 0px 1px 0px #292929e5;
     font-size: 2rem;
     font-family: cursive;
-    margin: 10px 10px 10px 25px;
+    margin: 10px;
 }
 
 .logo {

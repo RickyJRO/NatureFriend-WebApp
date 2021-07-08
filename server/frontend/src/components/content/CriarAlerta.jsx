@@ -95,7 +95,11 @@ export default function CriarAlerta(props) {
                             setSubmitting(false);
                         })
                     }
-                    
+                    else if (latitude == null || longitude == null){
+                        swal('Erro!', 'Precisa de inserir a sua Localização', 'error').then(()=> {
+                            setSubmitting(false);
+                        })
+                    }
                     else{
                         submitForm(formData);
                         setSubmitting(false);

@@ -13,7 +13,7 @@ import { faLeaf} from '@fortawesome/free-solid-svg-icons'
 import { faSmog} from '@fortawesome/free-solid-svg-icons'
 import { faHiking} from '@fortawesome/free-solid-svg-icons'
 import { faGem} from '@fortawesome/free-solid-svg-icons'
-import sad from '../google/icon.png'
+
 
 export default function UserProfiles(props) {
     const { id } = useParams();
@@ -38,8 +38,7 @@ export default function UserProfiles(props) {
 
     const fetchData = async id => {
         try {
-            const response = await axios.get('/Perfil/id/' + id, { headers: { Authorization: localStorage.getItem('TOKEN_KEY') } }).then((res)=>{
-                console.log(res.data.user_rank)
+            await axios.get('/Perfil/id/' + id, { headers: { Authorization: localStorage.getItem('TOKEN_KEY') } }).then((res)=>{
                 setUsername(res.data.user_name)
                 setUserEmail(res.data.user_email)
                 setUserPhone(res.data.user_phone)
@@ -77,9 +76,13 @@ export default function UserProfiles(props) {
         
     }
   
+    if(loader == true){
+        return(
+            <div className='loader'></div>
+        )
+    }
     return (
         <>
-        {loader &&  <div className='loader'></div>}
             <motion.div
                 exit={{ x: -1000 }}
                 initial={{ y: -1000, opacity: -1 }}
@@ -131,7 +134,7 @@ export default function UserProfiles(props) {
                                                 <hr></hr>
                                             </div>
                                             <div className='UserPostName'>
-                                                {post.post_title && post.post_title, ""}
+                                                {post.post_title}
                                             </div>
                                             <div className='UserPostDescription'>
                                                 {post.post_description}

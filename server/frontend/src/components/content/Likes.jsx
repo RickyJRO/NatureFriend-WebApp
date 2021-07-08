@@ -73,7 +73,7 @@ function Likes(props) {
                     setLikes(likes + 1)
                     setLiked(true)
                 }
-                console.log(res)
+                
             })
             .catch(error => { console.log(error) })
         }else{
@@ -86,7 +86,7 @@ function Likes(props) {
                     setLikes(likes + 1)
                     setLiked(true)
                 }
-                console.log(res)
+              
             })
             .catch(error => { console.log(error) })
         }
@@ -105,7 +105,7 @@ function Likes(props) {
                 setDislikes(dislikes + 1)
                 setDisliked(true)
             }
-            console.log(res)
+            
         })
         .catch(error => { console.log(error) })
     }else{
@@ -118,7 +118,7 @@ function Likes(props) {
                     setDislikes(dislikes + 1)
                     setDisliked(true)
                 }
-                console.log(res)
+                
             })
             .catch(error => { console.log(error) })
     }

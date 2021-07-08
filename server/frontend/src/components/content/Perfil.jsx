@@ -66,7 +66,6 @@ class Profile extends Component {
           '/' + response.data.user_img
           console.log(response.data.user_img)
         this.setState({ response: response.data })
-        console.log(this.state.response)
       })
       .catch(error => {
         this.setState({ error_message: error.message })
