@@ -12,7 +12,6 @@ var cron = require('node-cron');
 
 
 cron.schedule('0 */6 * * *',async () => {
-    console.log('Correu script');
     const sql = "SELECT user_id FROM users";
     await db.query(sql).then((resp) => {
       const users = resp.rows;

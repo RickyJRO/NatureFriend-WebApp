@@ -146,6 +146,7 @@ router.post("/googleLogin", async(req,res)=>{
 });
 router.post("/login", async (req, res) => {
     console.log(req.body)
+    try{
     const sql = "SELECT * FROM users WHERE user_email=$1";
     const doc = await db.query(sql, [req.body.email]);
     if (doc.rowCount > 0) {
@@ -167,6 +168,9 @@ router.post("/login", async (req, res) => {
     } else { 
         res.json({result: "error", message: "Email ou Password Incorretos"});
     }
+}catch(err){
+    console.log(err)
+}
 });
 
 
