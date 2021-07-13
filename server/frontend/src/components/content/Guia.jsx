@@ -66,7 +66,7 @@ export default function Guia() {
             <div className="guia__description">
             <h2>Queremos agradecer-lhe ter-se juntado à nossa comunidade!</h2>
             <h3>
-            Esperemos que tenha lido as normas e regras da nossa aplicação, tenha uma postura respeituosa e que o seu foco seja sempre reportar maus tratos ao nosso planeta.<br></br>
+            Esperemos que tenha lido as normas e regras da nossa aplicação, tenha uma postura respeitosa e que o seu foco seja sempre reportar maus tratos ao nosso planeta.<br></br>
             Esta aplicação foi criada pelos alunos da Universidade Autónoma de Lisboa, Ricardo Oliveira, Rafael Rocha e David Oliveira e supervisionada pelo professor Gonçalo Valadão.
             </h3>
             </div>
@@ -119,7 +119,7 @@ export default function Guia() {
             <h2 style={{color:"rgb(131, 131, 131)"}}>Silver <FontAwesomeIcon icon={faLeaf}/><br></br></h2><h5 style={{marginTop:'-15px'}}>Ter 15 alertas</h5>
             <h2 style={{color:"#f7de00"}}>Gold <FontAwesomeIcon icon={faSmog}/><br></br></h2><h5 style={{marginTop:'-15px'}}>Ter 30 alertas</h5>
             <h2 style={{color:"#00ffcf"}}>Platinum <FontAwesomeIcon icon={faHiking}/><br></br></h2><h5 style={{marginTop:'-15px'}}>Ter 50 alertas</h5>
-            <h2 style={{color:"#00e0fd"}}>Diamong <FontAwesomeIcon  icon={faGem}/><br></br></h2><h5 style={{marginTop:'-15px'}}>Ter 100 alertas</h5>
+            <h2 style={{color:"#00e0fd"}}>Diamond <FontAwesomeIcon  icon={faGem}/><br></br></h2><h5 style={{marginTop:'-15px'}}>Ter 100 alertas</h5>
             </div>
             </>}
             </div>

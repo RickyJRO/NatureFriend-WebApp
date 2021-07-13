@@ -35,6 +35,8 @@ uploadPostImage = async (files, doc, postid) => {
 };
 
 async function sql(fields,files) {
+        console.log(new Date());
+        
         const dados = [
             fields.post_title,
             fields.post_description,
@@ -43,6 +45,7 @@ async function sql(fields,files) {
             fields.user_id,
             new Date(),
         ];
+
         const sql = "INSERT INTO posts(post_title,post_description,post_lat,post_lng,user_id,post_date) VALUES ($1,$2,$3,$4,$5,$6)";
         await db.query(sql, dados);
         const dados2 = [fields.user_id, fields.post_title, fields.post_lat, fields.post_lng];

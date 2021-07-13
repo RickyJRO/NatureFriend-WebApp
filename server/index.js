@@ -41,7 +41,10 @@ app.use(express.static(path.join(__dirname, "frontend/build")))
 app.get("*",(req, res) => {
   res.sendFile(path.join(__dirname,"frontend/build/index.html"))
 })
-
+app.get('/images/:key', (req,res)=>{
+  const key= req.paramskey;
+  
+})
 app.listen(port, () => {
-    console.log(`Server listening on ${port}`);
+    console.log(`Server listening on ${port} eueu`);
 });
