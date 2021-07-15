@@ -111,7 +111,7 @@ export default function Guia() {
             <h2>Ranking:
             </h2>
             <div className="guia__descriptionGif">
-            <h3>Na NatureFriend recompensamos o sue esforço, e para isso desenvolvemos um sistema de ranking para poder classificar os membros que mais ajudam o planeta.<br></br>
+            <h3>Na NatureFriend recompensamos o seu esforço, e para isso desenvolvemos um sistema de ranking para poder classificar os membros que mais ajudam o planeta.<br></br>
             <br></br>
             De tal modo que o sistema de ranking é composto:<br></br><br></br>
             </h3>

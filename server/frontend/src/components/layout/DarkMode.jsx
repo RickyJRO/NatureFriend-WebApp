@@ -4,6 +4,7 @@ import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 
 export default function DarkMode() {
+    
     const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')));
 
     const trigger = () => {

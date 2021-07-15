@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
 
 function ImgVideo(props) {
+
     const [foto, setFoto] = useState(null);
 
     
     console.log(props.img)
+
     function setPhoto(photo){
         try{
             if(photo.split("_").length > 1){
@@ -15,7 +17,6 @@ function ImgVideo(props) {
         }catch{
             return '/' + photo
         }
-        
     }
   
 

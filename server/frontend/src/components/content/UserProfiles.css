@@ -117,7 +117,7 @@
     display: flex;
 }
 .columnUserDesc {
-    
+    max-width: 1000px;
     color:var(--background);
     flex: 1;
 }
